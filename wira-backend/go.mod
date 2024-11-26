@@ -1,4 +1,4 @@
-module wira_assessment/wira-backend
+module wira-backend
 
 go 1.23.3
 

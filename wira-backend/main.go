@@ -57,9 +57,13 @@ import (
 	"strconv"
 	"gorm.io/gorm"
 
-	"wira-backend/models"
-	"wira-backend/connection"
-	"wira-backend/services"
+	"github.com/KsoonQuea/wira_assessment/wira-backend/models"
+	"github.com/KsoonQuea/wira_assessment/wira-backend/services"
+	"github.com/KsoonQuea/wira_assessment/wira-backend/connection"
+
+	// "wira-backend/models"
+	// "wira-backend/connection"
+	// "wira-backend/services"
 )
 
 type Repository struct {
