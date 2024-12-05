@@ -17,18 +17,18 @@ const error     = ref(null);
 
 DataTable.use(DataTablesCore);
 
-const columns = [
-  { data: 'character_name', title: 'Character Name' },
-  { data: 'username',       title: 'Username' },
-  { data: 'email',          title: 'Email' },
-  { data: 'reward_score',   title: 'Score' },
-  { data: 'class_id',       title: 'Class' },
-];
-
-const options = {
-  responsive: true,
-  select: true,
-};
+// const columns = [
+//   { data: 'character_name', title: 'Character Name' },
+//   { data: 'username',       title: 'Username' },
+//   { data: 'email',          title: 'Email' },
+//   { data: 'reward_score',   title: 'Score' },
+//   { data: 'class_id',       title: 'Class' },
+// ];
+//
+// const options = {
+//   responsive: true,
+//   select: true,
+// };
 
 const fetchRankings = async () => {
   try {
@@ -63,35 +63,35 @@ onMounted(() => {
       <p class="text-red-600">{{ error }}</p>
     </div>
     <div v-else>
-<!--      <DataTable class="display">-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--          <th>No. </th>-->
-<!--          <th>Character</th>-->
-<!--          <th>Username</th>-->
-<!--          <th>Email</th>-->
-<!--          <th>Score</th>-->
-<!--          <th>Class</th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr v-for="(item, index) in rankings" :key="index" :class="{'bg-gray-100': index % 2 === 0}">-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ index + 1 }}</td>-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ item.character_name }}</td>-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ item.username }}</td>-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ item.email }}</td>-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ item.reward_score }}</td>-->
-<!--          <td class="py-2 px-4 border-b text-center">{{ item.class_id }}</td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--      </DataTable>-->
+      <DataTable class="display">
+        <thead>
+        <tr>
+          <th>No. </th>
+          <th>Character</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Score</th>
+          <th>Class</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(item, index) in rankings" :key="index" :class="{'bg-gray-100': index % 2 === 0}">
+          <td class="py-2 px-4 border-b text-center">{{ index + 1 }}</td>
+          <td class="py-2 px-4 border-b text-center">{{ item.character_name }}</td>
+          <td class="py-2 px-4 border-b text-center">{{ item.username }}</td>
+          <td class="py-2 px-4 border-b text-center">{{ item.email }}</td>
+          <td class="py-2 px-4 border-b text-center">{{ item.reward_score }}</td>
+          <td class="py-2 px-4 border-b text-center">{{ item.class_id }}</td>
+        </tr>
+        </tbody>
+      </DataTable>
 
-      <DataTable
-        :columns="columns"
-        :options="options"
-        ajax=""
-        class="display nowrap"
-      />
+<!--      <DataTable-->
+<!--        :columns="columns"-->
+<!--        :options="options"-->
+<!--        ajax=""-->
+<!--        class="display nowrap"-->
+<!--      />-->
     </div>
   </div>
 </template>
