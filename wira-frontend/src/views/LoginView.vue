@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen  flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class=" w-screen  mx-5">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <h2 class="mt-6 pl-2 text-left text-5xl tracking-tight font-medium text-gray-800 dark:text-white ">
         Welcome Back
